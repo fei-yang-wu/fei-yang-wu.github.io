@@ -24,10 +24,29 @@
     into a deployable proprioceptive student.
 
     #html.div(class: "project-links")[
-      #link("humanoid-locomotion/")[Project page] ·
-      #link("https://lidar-learn-to-teach.github.io/")[Website] ·
-      #link("https://arxiv.org/abs/2402.06783")[Paper] ·
-      #link("https://www.youtube.com/watch?v=pkw4gxOn6Ho")[Video]
+      #link("https://lidar-learn-to-teach.github.io/")[#html.span(class: "proj-icon icon-project")[]Project page]
+      #link("https://arxiv.org/abs/2402.06783")[#html.span(class: "proj-icon icon-arxiv")[]arXiv]
+      #link("https://www.youtube.com/watch?v=pkw4gxOn6Ho")[#html.span(class: "proj-icon icon-video")[]Video]
+    ]
+  ]
+
+  #html.div(class: "project-entry")[
+    === #link("distributional-inverse-rl/")[Distributional Inverse Reinforcement Learning]
+
+    #html.div(class: "project-tags")[
+      #html.span(class: "tag")[Preprint 2025]
+      #html.span(class: "tag")[IRL]
+    ]
+
+    We introduce a distributional framework for offline inverse reinforcement learning
+    that models uncertainty over reward functions and the full distribution of returns,
+    rather than estimating a single reward. Using first-order stochastic dominance and
+    distortion risk measures, the method captures richer structure in expert behavior,
+    enabling risk-aware imitation and state-of-the-art performance across synthetic,
+    neurobehavioral, and MuJoCo benchmarks.
+
+    #html.div(class: "project-links")[
+      #link("https://arxiv.org/abs/2510.03013")[#html.span(class: "proj-icon icon-arxiv")[]arXiv]
     ]
   ]
 ]

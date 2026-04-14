@@ -39,5 +39,26 @@
 /// - path:  link target (default "../")
 /// - label: link text   (default "Back")
 #let back-link(path: "../", label: "Back") = {
-  html.div(class: "back-link")[← #link(path)[#label]]
+  // Use html.a directly to bypass the template-links rule, which would
+  // mis-classify "../" as a resource (because ".." contains a dot) and
+  // open the link in a new tab.
+  html.div(class: "back-link")[← #html.a(href: path)[#label]]
+}
+
+/// Publication entry with title, authors, and venue on separate lines.
+///
+/// - title:   paper title (content)
+/// - url:     optional URL for the title link (string or none)
+/// - authors: author list (content)
+/// - venue:   venue / year (content or none to omit)
+#let pub-entry(title: [], url: none, authors: [], venue: none) = {
+  html.div(class: "pub-entry")[
+    #html.div(class: "pub-title")[
+      #if url != none { link(url)[#title] } else { title }
+    ]
+    #html.div(class: "pub-authors")[#authors]
+    #if venue != none {
+      html.div(class: "pub-venue")[#venue]
+    }
+  ]
 }

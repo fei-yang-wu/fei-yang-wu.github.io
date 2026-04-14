@@ -6,7 +6,10 @@
       let is-external = it.dest.starts-with("http")
 
       // 2. Determine whether it is a "non-web page resource"
-      let is-resource = it.dest.contains(".") and not it.dest.ends-with(".html")
+      //    Exclude relative paths (starting with "." e.g. "../" or "/" for root-relative)
+      //    because ".." contains a dot and would otherwise be mis-identified as a resource.
+      let is-relative = it.dest.starts-with(".") or it.dest.starts-with("/")
+      let is-resource = not is-relative and it.dest.contains(".") and not it.dest.ends-with(".html")
 
       if is-external or is-resource {
         html.a(

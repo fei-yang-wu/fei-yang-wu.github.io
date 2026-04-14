@@ -71,12 +71,65 @@ PROJECT PAGES
     border-radius: 3px;
 }
 
-/* Links row inside a project card */
+/* Icon-based links row inside a project card */
 .project-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1.2rem;
     margin-top: 1rem;
-    font-size: 1.3rem;
-    line-height: 2.2rem;
+    align-items: center;
     width: 100%;
+}
+
+.project-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35em;
+    font-size: 1.3rem;
+    text-decoration: none !important;
+    background-image: none !important;
+    white-space: nowrap;
+    transition: opacity 0.15s ease;
+}
+
+.project-links a:hover {
+    opacity: 0.7;
+}
+
+/* SVG icon via CSS mask — inherits currentColor automatically */
+.proj-icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    background-color: currentColor;
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    vertical-align: -0.1em;
+    flex-shrink: 0;
+}
+
+.icon-project {
+    -webkit-mask-image: url('/assets/icons/project-page.svg');
+    mask-image: url('/assets/icons/project-page.svg');
+}
+
+.icon-paper {
+    -webkit-mask-image: url('/assets/icons/paper.svg');
+    mask-image: url('/assets/icons/paper.svg');
+}
+
+.icon-arxiv {
+    -webkit-mask-image: url('/assets/icons/arxiv.svg');
+    mask-image: url('/assets/icons/arxiv.svg');
+}
+
+.icon-video {
+    -webkit-mask-image: url('/assets/icons/video.svg');
+    mask-image: url('/assets/icons/video.svg');
 }
 
 /* Back navigation for project detail pages */
@@ -97,12 +150,52 @@ PROJECT PAGES
     background-image: none !important;
 }
 
-/* Responsive 16:9 video embed — matches the Tufte text-column width */
+/*******************************************************************************
+PUBLICATION ENTRIES
+*******************************************************************************/
+
+/* One publication entry: title / authors / venue on separate lines */
+.pub-entry {
+    margin-bottom: 1.5rem;
+    width: 100%;
+}
+
+.pub-entry > *:last-child {
+    margin-bottom: 0;
+}
+
+.pub-title {
+    font-size: 1.4rem;
+    line-height: 1.5;
+}
+
+.pub-authors {
+    font-size: 1.2rem;
+    margin-top: 0.2rem;
+    opacity: 0.7;
+}
+
+.pub-venue {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-top: 0.1rem;
+    opacity: 0.7;
+}
+
+
+/*******************************************************************************
+VIDEO EMBED
+*******************************************************************************/
+
+/* Responsive 16:9 video embed.
+   Uses aspect-ratio (not the padding-bottom hack) because padding-bottom
+   percentages are relative to the *containing block* width, not the
+   element's own width — so combining width:55% with padding-bottom:56.25%
+   produces a ~1:1 box, not 16:9. aspect-ratio avoids this entirely. */
 .video-embed {
     position: relative;
     width: 55%;
-    padding-bottom: 56.25%; /* 56.25% of own width = 16:9 aspect ratio */
-    height: 0;
+    aspect-ratio: 16 / 9;
     overflow: hidden;
     margin: 1.5rem 0;
     border-radius: 4px;
@@ -121,6 +214,65 @@ PROJECT PAGES
 
 @media (max-width: 760px) {
     .video-embed {
+        width: 100%;
+    }
+}
+
+
+/*******************************************************************************
+WIDE-COLUMN LAYOUT
+Opt in with `wide: true` in the page template call.
+Expands the main text column from Tufte's 55% to 67% while keeping the
+nav in the standard Tufte position. Suitable for project pages and blog
+posts that have no margin notes.
+*******************************************************************************/
+
+article.wide p,
+article.wide ul,
+article.wide ol,
+article.wide dl {
+    width: 67%;
+}
+
+article.wide pre {
+    width: 67%;
+}
+
+article.wide div[style*="border-inline-start"] {
+    width: 67% !important;
+}
+
+article.wide figure[role="math"] {
+    width: 67%;
+}
+
+/* left: half of column width, so transform: translateX(-50%) centers it */
+article.wide section > img,
+article.wide section > svg {
+    max-width: 67%;
+    left: 33.5%;
+}
+
+article.wide section > table {
+    left: 33.5%;
+}
+
+article.wide .video-embed {
+    width: 67%;
+}
+
+/* On mobile, all wide-mode widths collapse to 100% */
+@media (max-width: 760px) {
+    article.wide p,
+    article.wide ul,
+    article.wide ol,
+    article.wide dl,
+    article.wide pre,
+    article.wide div[style*="border-inline-start"] {
+        width: 100%;
+    }
+
+    article.wide .video-embed {
         width: 100%;
     }
 }

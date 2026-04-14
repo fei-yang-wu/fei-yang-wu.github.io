@@ -2,7 +2,7 @@
 #import "refs.typ": template-refs
 #import "notes.typ": template-notes
 #import "figures.typ": template-figures
-#import "layout.typ": full-width, margin-note, video-embed, back-link
+#import "layout.typ": full-width, margin-note, video-embed, back-link, pub-entry
 #import "links.typ": template-links
 #import "metadata.typ": metadata
 
@@ -35,6 +35,15 @@
   // Custom CSS and JS Scripts
   css: ("/assets/custom.css",),
   js-scripts: (),
+
+  /// Set to true to expand the main column from Tufte's 55% to 75%.
+  /// Use on pages without margin notes where the empty right margin looks awkward.
+  wide: false,
+
+  /// Set to true for a centered blog-style layout (max-width column,
+  /// equal margins on both sides). Overrides `wide`. Best for project
+  /// pages and blog posts that have no margin notes.
+  centered: false,
 
   content,
 ) = {
@@ -117,6 +126,7 @@
 
         // Main content
         html.article(
+          class: if centered { "centered" } else if wide { "wide" } else { "" },
           html.section(content),
         )
 

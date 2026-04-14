@@ -3,6 +3,7 @@
   title: "Humanoid Locomotion",
   description: "Inverse reinforcement learning and teacher-student learning for humanoid robot sim-to-real transfer",
   lang: "en",
+  wide: true,
 )
 
 #tufted.back-link(label: "Projects")
@@ -24,15 +25,23 @@ We use inverse reinforcement learning to infer reward functions from expert demo
 
 == Publications
 
-- #link("https://arxiv.org/abs/2402.06783")[Learn to Teach: Improve Sample Efficiency in Teacher-student Learning for Sim-to-Real Transfer]. RA-L 2025. \
-  Feiyang Wu, Xavier Nal, Zhaoyuan Gu, Ye Zhao, Anqi Wu
+#tufted.pub-entry(
+  title: [Learn to Teach: Improve Sample Efficiency in Teacher-student Learning for Sim-to-Real Transfer],
+  url: "https://arxiv.org/abs/2402.06783",
+  authors: [Feiyang Wu, Xavier Nal, Zhaoyuan Gu, Ye Zhao, Anqi Wu],
+  venue: [RA-L 2025],
+)
 
-- #link("https://arxiv.org/abs/2309.16074")[Infer and Adapt: Bipedal Locomotion Reward Learning from Demonstrations via Inverse Reinforcement Learning]. ICRA 2024. \
-  Feiyang Wu, Zhaoyuan Gu, Hanran Wu, Anqi Wu, Ye Zhao
+#tufted.pub-entry(
+  title: [Infer and Adapt: Bipedal Locomotion Reward Learning from Demonstrations via Inverse Reinforcement Learning],
+  url: "https://arxiv.org/abs/2309.16074",
+  authors: [Feiyang Wu, Zhaoyuan Gu, Hanran Wu, Anqi Wu, Ye Zhao],
+  venue: [ICRA 2024],
+)
 
 == Links
 
 - #link("https://lidar-learn-to-teach.github.io/")[Project website]
-- #link("https://arxiv.org/abs/2402.06783")[Paper: Learn to Teach (RA-L 2025)]
-- #link("https://arxiv.org/abs/2309.16074")[Paper: Infer and Adapt (ICRA 2024)]
+- #link("https://arxiv.org/abs/2402.06783")[arXiv: Learn to Teach]
+- #link("https://arxiv.org/abs/2309.16074")[arXiv: Infer and Adapt]
 - #link("https://www.youtube.com/watch?v=pkw4gxOn6Ho")[Video on YouTube]
