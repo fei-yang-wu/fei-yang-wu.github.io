@@ -3,3 +3,64 @@ CUSTOM STYLES
 
 Add your custom CSS styles here to override or extend the default styles.
 *******************************************************************************/
+
+.project-video-wrap {
+	display: flex;
+	justify-content: center;
+	margin: 0.75rem 0 1rem;
+}
+
+.project-video {
+	width: 100%;
+	aspect-ratio: 16 / 9;
+	border: 1px solid var(--theme-pre-border);
+	border-radius: 6px;
+	box-shadow: none;
+}
+
+h2 + p {
+	margin-top: 0.5rem;
+}
+
+.project-cards {
+	width: 100%;
+	display: grid;
+	gap: 1rem;
+	margin-top: 1rem;
+}
+
+.project-card {
+	border: 1px solid var(--theme-pre-border);
+	border-radius: var(--radius-sm);
+	padding: 0.8rem 0.9rem 0.9rem;
+	background: var(--theme-pre-bg);
+	box-sizing: border-box;
+}
+
+.project-card h3 {
+	margin: 0 0 0.45rem;
+}
+
+.project-card p {
+	margin: 0.2rem 0 0.55rem;
+}
+
+.project-card ul {
+	margin: 0.35rem 0 0;
+}
+
+.project-card li img,
+section li img {
+	vertical-align: -0.12em;
+	margin-right: 0.35em;
+}
+
+@media (max-width: 760px) {
+	.project-cards {
+		width: 100%;
+	}
+
+	.project-card {
+		padding: 0.7rem 0.75rem 0.8rem;
+	}
+}
