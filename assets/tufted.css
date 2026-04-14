@@ -122,8 +122,10 @@ h5 {
 h2 {
     font-size: 2.3rem;
     line-height: 1.2;
-    margin-top: 2rem;
+    margin-top: 2.5rem;
     margin-bottom: 1rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #ddd;
 }
 
 h3 {
@@ -532,7 +534,7 @@ footer {
 header.site-header {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
-    margin-left: 0.35em;
+    margin-left: 0;
 }
 
 footer {
@@ -543,6 +545,9 @@ footer {
 header nav {
     display: flex;
     gap: 1em;
+    /* Compensate for the 0.4em left padding on nav links so nav text
+       aligns with the left edge of body paragraph text */
+    margin-left: -0.4em;
 }
 
 header nav a,
