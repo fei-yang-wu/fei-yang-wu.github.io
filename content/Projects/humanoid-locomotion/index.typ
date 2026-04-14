@@ -1,23 +1,46 @@
 #import "../../index.typ": template, tufted
 #show: template.with(
-  title: "Learn to Teach",
-  description: "Learn to Teach project overview",
+  title: "Humanoid Locomotion",
+  description: "Inverse reinforcement learning and teacher-student learning for humanoid robot sim-to-real transfer",
   lang: "en",
 )
 
-= Learn to Teach: Improve Sample Efficiency in Teacher-student Learning for Sim-to-Real Transfer
+#html.div(class: "back-link")[← #link("../")[Projects]]
 
-This project focuses on teacher-student learning for humanoid robot locomotion with strong sample efficiency in simulation and transfer robustness.
+= Humanoid Locomotion
 
-We apply Learn to Teach to the Digit robot for robust sim-to-real transfer across diverse terrains and conditions.
+Sim-to-real transfer for robust bipedal locomotion via inverse reinforcement learning and teacher-student training.
 
-The key idea is to optimize a teacher policy that produces informative curricula for a student locomotion policy, improving data efficiency while maintaining stable transfer behavior.
+#tufted.full-width[
+  #html.div(class: "video-embed")[
+    #html.iframe(
+      src: "https://www.youtube.com/embed/pkw4gxOn6Ho?si=EcHfX0gOf0z9f5NB",
+      title: "Learn to Teach — Humanoid Locomotion Demo",
+      loading: "lazy",
+      referrerpolicy: "strict-origin-when-cross-origin",
+      allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share",
+      allowfullscreen: true,
+    )
+  ]
+]
 
-#let icon(path) = image(path, width: 0.95em)
+== Overview
+
+This project applies the Learn to Teach framework to the Digit humanoid robot, targeting sample-efficient sim-to-real transfer for robust locomotion across diverse terrains and conditions.
+
+We use inverse reinforcement learning to infer reward functions from expert demonstrations, then train a teacher policy in simulation using a LiDAR-enriched observation space. The teacher's knowledge is distilled into a deployable student policy that uses only proprioceptive sensing — enabling robust performance on hardware without privileged perception.
+
+== Publications
+
+- #link("https://arxiv.org/abs/2402.06783")[Learn to Teach: Improve Sample Efficiency in Teacher-student Learning for Sim-to-Real Transfer]. RA-L 2025. \
+  Feiyang Wu, Xavier Nal, Zhaoyuan Gu, Ye Zhao, Anqi Wu
+
+- #link("https://arxiv.org/abs/2309.16074")[Infer and Adapt: Bipedal Locomotion Reward Learning from Demonstrations via Inverse Reinforcement Learning]. ICRA 2024. \
+  Feiyang Wu, Zhaoyuan Gu, Hanran Wu, Anqi Wu, Ye Zhao
 
 == Links
 
-- #link("/Projects/")[#icon("../../../assets/icons/back.svg") Back to Projects]
-- #link("https://lidar-learn-to-teach.github.io/")[#icon("../../../assets/icons/website.svg") Project website]
-- #link("https://arxiv.org/abs/2402.06783")[#icon("../../../assets/icons/paper.svg") Paper]
-- #link("https://www.youtube.com/watch?v=pkw4gxOn6Ho")[#icon("../../../assets/icons/video.svg") Video]
+- #link("https://lidar-learn-to-teach.github.io/")[Project website]
+- #link("https://arxiv.org/abs/2402.06783")[Paper: Learn to Teach (RA-L 2025)]
+- #link("https://arxiv.org/abs/2309.16074")[Paper: Infer and Adapt (ICRA 2024)]
+- #link("https://www.youtube.com/watch?v=pkw4gxOn6Ho")[Video on YouTube]

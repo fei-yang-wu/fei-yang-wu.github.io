@@ -4,63 +4,117 @@ CUSTOM STYLES
 Add your custom CSS styles here to override or extend the default styles.
 *******************************************************************************/
 
-.project-video-wrap {
-	display: flex;
-	justify-content: center;
-	margin: 0.75rem 0 1rem;
+
+/*******************************************************************************
+FULL-WIDTH OVERRIDES
+*******************************************************************************/
+
+/* Tufte CSS constrains p/ul/ol to 55% — override inside full-width sections */
+.fullwidth p,
+.fullwidth ul,
+.fullwidth ol,
+.fullwidth dl {
+    width: 100%;
 }
 
-.project-video {
-	width: 100%;
-	aspect-ratio: 16 / 9;
-	border: 1px solid var(--theme-pre-border);
-	border-radius: 6px;
-	box-shadow: none;
+
+/*******************************************************************************
+PROJECT PAGES
+*******************************************************************************/
+
+/* Project entry card */
+.project-entry {
+    margin: 0 0 2rem;
+    padding: 1.5rem 1.8rem;
+    border: 1px solid var(--theme-pre-border);
+    border-radius: 6px;
+    background-color: var(--theme-pre-bg);
 }
 
-h2 + p {
-	margin-top: 0.5rem;
+.project-entry > *:first-child {
+    margin-top: 0;
 }
 
-.project-cards {
-	width: 100%;
-	display: grid;
-	gap: 1rem;
-	margin-top: 1rem;
+.project-entry > *:last-child {
+    margin-bottom: 0;
 }
 
-.project-card {
-	border: 1px solid var(--theme-pre-border);
-	border-radius: var(--radius-sm);
-	padding: 0.8rem 0.9rem 0.9rem;
-	background: var(--theme-pre-bg);
-	box-sizing: border-box;
+/* Override Tufte 55% width for text inside cards */
+.project-entry p,
+.project-entry ul,
+.project-entry ol {
+    width: 100%;
 }
 
-.project-card h3 {
-	margin: 0 0 0.45rem;
+.project-entry h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
 }
 
-.project-card p {
-	margin: 0.2rem 0 0.55rem;
+/* Venue / year badge row */
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin: 0.4rem 0 1rem;
 }
 
-.project-card ul {
-	margin: 0.35rem 0 0;
+.tag {
+    display: inline-block;
+    padding: 0.1rem 0.5rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    font-family: monospace;
+    font-weight: normal;
+    border: 1px solid var(--theme-pre-border);
+    border-radius: 3px;
 }
 
-.project-card li img,
-section li img {
-	vertical-align: -0.12em;
-	margin-right: 0.35em;
+/* Links row inside a project card */
+.project-links {
+    margin-top: 1rem;
+    font-size: 1.3rem;
+    line-height: 2.2rem;
+    width: 100%;
 }
 
-@media (max-width: 760px) {
-	.project-cards {
-		width: 100%;
-	}
-
-	.project-card {
-		padding: 0.7rem 0.75rem 0.8rem;
-	}
+/* Back navigation for project detail pages */
+.back-link {
+    display: block;
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+    opacity: 0.65;
+    transition: opacity 0.15s ease;
 }
+
+.back-link:hover {
+    opacity: 1;
+}
+
+.back-link a {
+    text-decoration: none !important;
+    background-image: none !important;
+}
+
+/* Responsive 16:9 video embed */
+.video-embed {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    margin: 1.5rem 0;
+    border-radius: 4px;
+    border: 1px solid var(--theme-pre-border);
+    background-color: var(--theme-pre-bg);
+}
+
+.video-embed iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
