@@ -1,6 +1,6 @@
 /*******************************************************************************
 THEME CONFIGURATION
-主题配置 - 深色/浅色模式切换
+Theme configuration - dark/light mode switching
 
 This file contains all styles related to light/dark theme switching.
 *******************************************************************************/
@@ -213,7 +213,7 @@ THEME TOGGLE BUTTON (DeepWiki Style)
     margin-top: 1.6em;
     transition: background-color 0.15s ease;
     color: #374151;
-    /* 浅色模式下月亮图标颜色 */
+    /* Moon icon color in light mode */
 }
 
 .theme-toggle-btn:hover {
@@ -230,7 +230,7 @@ THEME TOGGLE BUTTON (DeepWiki Style)
     height: 1.8rem;
 }
 
-/* 深色模式下太阳图标颜色 */
+/* Sun icon color in dark mode */
 .theme-toggle-btn.is-dark {
     color: #d1d5db;
 }

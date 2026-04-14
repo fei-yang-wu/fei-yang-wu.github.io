@@ -4,9 +4,9 @@
   description: "Some blog examples",
 )
 
-= 博客 / Blog
+= Blog
 
-中文博客样例可参考 #link("https://yousa-mirage.github.io/Blog")[我的个人网站]。
+For additional blog examples, see #link("https://yousa-mirage.github.io/Blog")[my personal website].
 
 == 2025
 

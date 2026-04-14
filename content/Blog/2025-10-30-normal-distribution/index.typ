@@ -1,6 +1,6 @@
 #import "../index.typ": template, tufted
 #import "@preview/lilaq:0.5.0" as lq
-// 如需生成 RSS feed，必须填写 title、description 和 date 元数据
+// For RSS feed generation, set title, description, and date metadata.
 #show: template.with(
   title: "The Normal Distribution: A Fundamental Concept in Statistics",
   description: "An in-depth look at the normal distribution, its properties, significance, and real-world applications across various fields.",

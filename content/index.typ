@@ -1,36 +1,61 @@
 #import "../config.typ": template, tufted
-#show: template
+#show: template.with(
+  title: "Feiyang",
+  description: "Feiyang Wu personal homepage",
+  lang: "en",
+)
 
-// tufted.margin-note 可以让你在边栏中放置内容
-// 宽大的边栏是 tufte 样式的特点，将注释放于其中并与正文并排，便于对照
-#tufted.margin-note({
-  image("imgs/tufted-duck-female-with-duckling.webp")
-  image("imgs/tufted-duck-male.webp")
-})
+#tufted.full-width[
 
-#tufted.margin-note[
-  凤头潜鸭（学名 _Aythya fuligula_）是一种中型潜水鸭，原生于欧亚大陆。凭借卓越的潜水能力，它们能深入水下捕食猎物。
+= Feiyang
+
+*Wu Fei Yang (Wú Fēi Yáng)*, "woo-FAY-yahng" #link("https://translate.google.com/?sl=auto&tl=en&text=wu%20fei%20yang&op=translate")[🔊] \
+ML PhD student at Georgia Tech
+
+#link("https://www.linkedin.com/in/feiyangwu/")[Linkedin] | #link("https://x.com/fei_yang_wu")[X] | #link("https://github.com/fei-yang-wu")[GitHub]
+
+My research interests lie in the intersection of optimization, reinforcement learning, and robotics. I develop algorithms to efficiently train robots, ideally with theoretical guarantee.
+
+I am co-advised by #link("https://sites.google.com/view/brainml/home")[Prof. Anqi Wu] and #link("https://lab-idar.gatech.edu/")[Prof. Ye Zhao] at Georgia Tech. Additionally, I had the privilege to collaborate with #link("https://sites.gatech.edu/guanghui-lan/")[Prof. George Lan] on stochastic optimization and RL.
+
+Previously, I contributed to the development team of optimization solvers for large-scale linear programming problems at Chinese University of Hong Kong, Shenzhen (CUHKSZ), where I spent my undergrad years in computer science and engineering.
+
+== News
+
+- [Jan 2026] Two papers accepted to ICRA 2026!
+- [Sep 2025] Our work on IRL with reward distributions is released on arxiv.
+- [Aug 2025] Our paper L2T got accepted at RA-L. Check out #link("https://lidar-learn-to-teach.github.io/")[here].
+- [May 2025] I passed my qualifying exam.
+- [May 2025] One paper accpeted to ICML 2025. Congrats Jingyang!
+- [April 2025] One paper submitted to RA-L. Checkout here: #link("https://lidar-learn-to-teach.github.io/")[https://lidar-learn-to-teach.github.io].
+- [Sep 2024] Visiting student Xavier Nal finished his master degree project in our lab. See our results here. Official submission coming soon. Initial version available online.
+- [May 2024] I interned at Georgia Tech Research Institute on generalizing diffusion policies on robotics manipulation tasks.
+- [Dec 2023] Our paper on using Inverse Reinforcement Learning accepted in ICRA 2024.
+- [Oct 2023] Our paper on average reward accepted as poster in Neurips 2023.
+
+== Publication
+
+=== Reinforcement Learning
+
+- #link("https://arxiv.org/pdf/2510.03013")[Distributional Inverse Reinforcement Learning]. 2025. preprint.
+  Feiyang Wu, Ye Zhao, Anqi Wu
+- #link("https://arxiv.org/pdf/2509.18466")[RL-augmented Adaptive Model Predictive Control for Bipedal Locomotion over Challenging Terrain]. ICRA 2026.
+  Junnosuke Kamohara, Feiyang Wu, Chinmayee Wamorkar, Seth Hutchinson, Ye Zhao
+- #link("https://arxiv.org/pdf/2509.21231")[SEEC: Stable End-Effector Control with Model-Enhanced Residual Learning for Humanoid Loco-Manipulation]. ICRA 2026.
+  Jaehwi Jang, Zhuoheng Wang, Ziyi Zhou, Feiyang Wu, Ye Zhao
+- #link("https://arxiv.org/pdf/2501.12633")[Inverse Reinforcement Learning with Switching Rewards and History Dependency for Characterizing Animal Behaviors]. ICML 2025.
+  Jingyang Ke, Feiyang Wu, Jiyi Wang, Zhaoyuan Gu, Jeffrey Markowitz, Anqi Wu
+- #link("https://arxiv.org/abs/2402.06783")[Learn to Teach: Improve Sample Efficiency in Teacher-student Learning for Sim-to-Real Transfer]. 2025. RA-L.
+  Feiyang Wu, Xavier Nal, Zhaoyuan Gu, Ye Zhao, Anqi Wu
+- #link("https://arxiv.org/abs/2205.05800")[Stochastic first-order methods for average-reward Markov decision processes]. 2024. Mathematics of Operation Research.
+  Tianjiao Li, Feiyang Wu, Guanghui Lan
+- #link("https://arxiv.org/abs/2309.16074")[Infer and Adapt: Bipedal Locomotion Reward Learning from Demonstrations via Inverse Reinforcement Learning]. Sept 2023. ICRA 2024.
+  Feiyang Wu, Zhaoyuan Gu, Hanran Wu, Anqi Wu, Ye Zhao
+- #link("https://arxiv.org/abs/2305.14608")[Inverse Reinforcement Learning with the Average Reward Criterion]. NeurIPS 2023.
+  Feiyang Wu, Jingyang Ke, Anqi Wu
+
+=== Computer Vision
+
+- #link("https://ieeexplore.ieee.org/abstract/document/9222121")[SAniHead: Sketching Animal-Like 3D Character Heads Using a View-Surface Collaborative Mesh Generative Network]. 2020. IEEE Transactions on Visualization and Computer Graphics (TVCG).
+  Dong Du, Xiaoguang Han, Hongbo Fu, Feiyang Wu, Yizhou Yu, Shuguang Cui, Ligang Liu
 ]
-#tufted.margin-note[
-  The tufted duck (_Aythya fuligula_) is a medium-sized diving duck native to Eurasia. Known for its diving ability, it can plunge to great depths to forage for food.
-]
-
-= Tufted 博客模板
-
-这是一个基于 #link("https://typst.app/")[Typst] 和 #link("https://github.com/vsheg/tufted")[Tufted] 的静态网站构建模板，手把手教你搭建简洁、美观的个人博客、作品集和简历设计。
-
-#figure(caption: "网站示例")[#image("imgs/devices.webp")]
-
-如果你通过访问本地地址（运行 `preview` 或其他本地服务）中看到了本页面，说明你已经成功安装了依赖、成功构建了网页、成功运行了预览。恭喜你！
-
-想要使用这个模板编写你自己的网站，你需要学会使用 Typst。放心，非常好上手。
-
-我在目前的网站中包含了尽可能多的 Typst 用例#footnote[例如文字、段落、分级标题、引用块、代码块、有序列表、无序列表、表格、图片、公式、链接、脚注、参考文献、嵌入 markdown 等。这块文字便是脚注，使用 `#footnote()` 函数编写。]，你可以在源代码中看到这些内容的 Typst 实现。我也包含了丰富的文档来帮助你编写页面和部署网站，你可以在 #link("/Docs/")[Docs] 页看到这些文档。
-
-== 🎨 样式特点
-
-#link("https://edwardtufte.github.io/tufte-css/")[*Tufte 样式*] 源于数据可视化大师 Edward Tufte#footnote[爱德华·罗尔夫·塔夫特（生于1942年3月14日），常被称为“ET”，是美国统计学家，耶鲁大学政治学、统计学与计算机科学荣休教授。他因在信息设计领域的著述和作为数据可视化领域的先驱而闻名。] 的设计理念，主张“内容至上”与极简主义，力求去除一切干扰信息的视觉杂音。
-
-#link("https://edwardtufte.github.io/tufte-css/")[*The Tufte style*] originates from the design philosophy of data visualization master _Edward Tufte_#footnote[Edward Rolf Tufte (/ˈtʌfti/; born March 14, 1942), sometimes known as "ET", is an American statistician and professor emeritus of political science, statistics, and computer science at Yale University. He is noted for his writings on information design and as a pioneer in the field of data visualization.], advocating for a "content-first" approach and minimalism while striving to eliminate all visual noise that distracts from the information.
-
-其最鲜明的特点是采用*宽大的侧边栏布局*，将注释、参考文献和图表直接并排展示在正文旁，取代了传统的脚注或尾注，配合优雅的*衬线字体*与*类纸张背景*，在数字屏幕上复刻了如经典学术著作般清晰、优雅、沉浸的深度阅读体验。

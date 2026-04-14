@@ -1,5 +1,5 @@
 #import "../index.typ": template, tufted
-// 如需生成 RSS feed，必须填写 title、description 和 date 元数据
+// For RSS feed generation, set title, description, and date metadata.
 #show: template.with(
   title: "Monkeys vs Apes: Understanding the Difference",
   description: "Exploring the key differences between monkeys and apes, including physical traits, intelligence, and evolutionary relationships.",

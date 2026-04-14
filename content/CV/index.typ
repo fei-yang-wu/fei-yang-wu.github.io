@@ -1,69 +1,28 @@
 #import "../index.typ": template, tufted
 #show: template.with(
-  title: "Edward R. Tufte",
-  description: "CV of Edward R. Tufte",
+  title: "CV",
+  description: "CV of Feiyang Wu",
   lang: "en"
 )
-#import "@preview/citegeist:0.2.0": load-bibliography
 
-= Edward R. Tufte
+= CV
 
-#tufted.margin-note[
-  Statistician, Artist, and Professor Emeritus \
-  Website: #link("https://www.edwardtufte.com")[edwardtufte.com] \
-  Email: #link("mailto:noreply@edwardtufte.com", "noreply@edwardtufte.com")
-]
+Feiyang Wu (Wú Fēi Yáng)
 
-#link("CV-PDF.pdf")[[PDF version is available! Click me!]]\
-#link("CV-PDF.pdf")[[点击这里查看 PDF 版本！]]
+ML PhD student at Georgia Tech.
 
-Research in statistical evidence and analytical design for information visualization, integrating principles from statistics, graphic design, and cognitive science for the effective presentation of quantitative data.
+Research interests: optimization, reinforcement learning, and robotics.
 
-== Experience
+== Advisors and Collaborators
 
-- *1983--Present*: Founder & Publisher, Graphics Press. Independent publishing house specializing in information design and data visualization.
-- *1977--1999*: Professor Emeritus, Yale University. Departments of Political Science, Statistics, and Computer Science.
-- *1967--1977*: Instructor, Princeton University. Woodrow Wilson School of Public and International Affairs.
+- #link("https://sites.google.com/view/brainml/home")[Prof. Anqi Wu]
+- #link("https://lab-idar.gatech.edu/")[Prof. Ye Zhao]
+- #link("https://sites.gatech.edu/guanghui-lan/")[Prof. George Lan]
 
-== Artworks
+== Links
 
-#tufted.margin-note[
-  #image("escaping-flatland.webp")
-]
+- LinkedIn: #link("https://www.linkedin.com/in/feiyangwu/")[https://www.linkedin.com/in/feiyangwu/]
+- X: #link("https://x.com/fei_yang_wu")[https://x.com/fei_yang_wu]
+- GitHub: #link("https://github.com/fei-yang-wu")[https://github.com/fei-yang-wu]
 
-#tufted.margin-note[
-  A homage to Edward R. Tufte's large stainless steel sculpture titled _Escaping Flatland_
-]
-
-Founder of Hogpen Hill Farms, a 234-acre sculpture park in Woodbury, Connecticut. Creator of large-scale works including _Larkin’s Twig_ and the _Escaping Flatland_ series, exhibited at the Aldrich Contemporary Art Museum.
-
-== Research Contributions
-
-Development of sparklines, a method for embedding high-resolution data graphics within text, and formulation of the data-ink ratio as a quantitative measure of graphical efficiency.
-
-== Books
-
-#{
-  let bib = load-bibliography(read("books.bib"))
-  for item in bib.values().rev() [
-    #let data = item.fields
-    - #strong(data.year): #emph(data.title)
-  ]
-}
-
-== Papers
-
-#{
-  let bib = load-bibliography(read("papers.bib"))
-  for item in bib.values().rev() [
-    #let data = item.fields
-    - #data.author, "#data.title," #emph(data.journal), #data.year. DOI: #link(data.url)[#data.doi]
-  ]
-}
-
-
-== Education
-
-- PhD in Political Science: Yale University (1968).
-- MS in Statistics: Stanford University.
-- BS in Statistics: Stanford University.
+For the latest publication list, please see the #link("/")[Home] page.
