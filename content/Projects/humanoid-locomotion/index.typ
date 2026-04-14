@@ -5,24 +5,16 @@
   lang: "en",
 )
 
-#html.div(class: "back-link")[← #link("../")[Projects]]
+#tufted.back-link(label: "Projects")
 
 = Humanoid Locomotion
 
 Sim-to-real transfer for robust bipedal locomotion via inverse reinforcement learning and teacher-student training.
 
-#tufted.full-width[
-  #html.div(class: "video-embed")[
-    #html.iframe(
-      src: "https://www.youtube.com/embed/pkw4gxOn6Ho?si=EcHfX0gOf0z9f5NB",
-      title: "Learn to Teach — Humanoid Locomotion Demo",
-      loading: "lazy",
-      referrerpolicy: "strict-origin-when-cross-origin",
-      allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share",
-      allowfullscreen: true,
-    )
-  ]
-]
+#tufted.video-embed(
+  "https://www.youtube.com/embed/pkw4gxOn6Ho?si=EcHfX0gOf0z9f5NB",
+  title: "Learn to Teach — Humanoid Locomotion Demo",
+)
 
 == Overview
 

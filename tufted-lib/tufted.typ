@@ -2,7 +2,7 @@
 #import "refs.typ": template-refs
 #import "notes.typ": template-notes
 #import "figures.typ": template-figures
-#import "layout.typ": full-width, margin-note
+#import "layout.typ": full-width, margin-note, video-embed, back-link
 #import "links.typ": template-links
 #import "metadata.typ": metadata
 
