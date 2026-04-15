@@ -12,7 +12,7 @@
   #html.div(class: "project-entry")[
     #html.div(class: "project-entry-layout")[
       #html.div(class: "project-entry-text")[
-        === #link("humanoid-locomotion/")[Inverse Reinforcement Learning for Humanoid Robots]
+        === #link("humanoid-locomotion/")[Reinforcement Learning for Humanoid Robots]
 
         #html.div(class: "project-tags")[
           #html.span(class: "tag")[RA-L 2025]
