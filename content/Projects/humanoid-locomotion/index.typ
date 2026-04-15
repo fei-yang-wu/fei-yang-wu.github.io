@@ -13,7 +13,7 @@
 Sim-to-real transfer for robust bipedal locomotion via inverse reinforcement learning and teacher-student training.
 
 #tufted.local-video(
-  "/assets/videos/RAL-revision-faststart.mp4",
+  "/assets/videos/RAL-revision-web.mp4",
   autoplay: true,
   muted: true,
   loop: true,

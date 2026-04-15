@@ -36,7 +36,7 @@
         style: "--project-entry-poster: url('/assets/videos/RAL-revision-card-poster.jpg');",
       )[
         #html.video(
-          src: "/assets/videos/RAL-revision-faststart.mp4",
+          src: "/assets/videos/RAL-revision-web.mp4",
           autoplay: true,
           muted: true,
           loop: true,
