@@ -12,9 +12,12 @@
 
 Sim-to-real transfer for robust bipedal locomotion via inverse reinforcement learning and teacher-student training.
 
-#tufted.video-embed(
-  "https://www.youtube.com/embed/pkw4gxOn6Ho?si=EcHfX0gOf0z9f5NB",
-  title: "Learn to Teach — Humanoid Locomotion Demo",
+#tufted.local-video(
+  "/assets/videos/RAL-revision-faststart.mp4",
+  autoplay: true,
+  muted: true,
+  loop: true,
+  poster: "/assets/videos/RAL-revision-card-poster.jpg",
 )
 
 == Overview

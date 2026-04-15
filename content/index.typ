@@ -22,40 +22,83 @@ Previously, I contributed to the development team of optimization solvers for la
 
 == News
 
-- [Jan 2026] Two papers accepted to ICRA 2026!
-- [Sep 2025] Our work on IRL with reward distributions is released on arxiv.
-- [Aug 2025] Our paper L2T got accepted at RA-L. Check out #link("https://lidar-learn-to-teach.github.io/")[here].
-- [May 2025] I passed my qualifying exam.
-- [May 2025] One paper accpeted to ICML 2025. Congrats Jingyang!
-- [April 2025] One paper submitted to RA-L. Checkout here: #link("https://lidar-learn-to-teach.github.io/")[https://lidar-learn-to-teach.github.io].
-- [Sep 2024] Visiting student Xavier Nal finished his master degree project in our lab. See our results here. Official submission coming soon. Initial version available online.
-- [May 2024] I interned at Georgia Tech Research Institute on generalizing diffusion policies on robotics manipulation tasks.
-- [Dec 2023] Our paper on using Inverse Reinforcement Learning accepted in ICRA 2024.
-- [Oct 2023] Our paper on average reward accepted as poster in Neurips 2023.
+#tufted.news-entry("Jan 2026", [Two papers accepted to ICRA 2026!])
+#tufted.news-entry("Sep 2025", [Our work on IRL with reward distributions is released on arxiv.])
+#tufted.news-entry("Aug 2025", [Our paper L2T got accepted at RA-L. Check out #link("https://lidar-learn-to-teach.github.io/")[here].])
+#tufted.news-entry("May 2025", [I passed my qualifying exam.])
+#tufted.news-entry("May 2025", [One paper accepted to ICML 2025. Congrats Jingyang!])
+#tufted.news-entry("Apr 2025", [One paper submitted to RA-L. Check out #link("https://lidar-learn-to-teach.github.io/")[lidar-learn-to-teach.github.io].])
+#tufted.news-entry("Sep 2024", [Visiting student Xavier Nal finished his master's project in our lab.])
+#tufted.news-entry("May 2024", [Interned at Georgia Tech Research Institute on generalizing diffusion policies for robot manipulation.])
+#tufted.news-entry("Dec 2023", [Our paper on inverse reinforcement learning accepted to ICRA 2024.])
+#tufted.news-entry("Oct 2023", [Our paper on average reward IRL accepted as poster at NeurIPS 2023.])
 
 == Publication
 
 === Reinforcement Learning
 
-- #link("https://arxiv.org/pdf/2510.03013")[Distributional Inverse Reinforcement Learning]. 2025. preprint.
-  Feiyang Wu, Ye Zhao, Anqi Wu
-- #link("https://arxiv.org/pdf/2509.18466")[RL-augmented Adaptive Model Predictive Control for Bipedal Locomotion over Challenging Terrain]. ICRA 2026.
-  Junnosuke Kamohara, Feiyang Wu, Chinmayee Wamorkar, Seth Hutchinson, Ye Zhao
-- #link("https://arxiv.org/pdf/2509.21231")[SEEC: Stable End-Effector Control with Model-Enhanced Residual Learning for Humanoid Loco-Manipulation]. ICRA 2026.
-  Jaehwi Jang, Zhuoheng Wang, Ziyi Zhou, Feiyang Wu, Ye Zhao
-- #link("https://arxiv.org/pdf/2501.12633")[Inverse Reinforcement Learning with Switching Rewards and History Dependency for Characterizing Animal Behaviors]. ICML 2025.
-  Jingyang Ke, Feiyang Wu, Jiyi Wang, Zhaoyuan Gu, Jeffrey Markowitz, Anqi Wu
-- #link("https://arxiv.org/abs/2402.06783")[Learn to Teach: Improve Sample Efficiency in Teacher-student Learning for Sim-to-Real Transfer]. 2025. RA-L.
-  Feiyang Wu, Xavier Nal, Zhaoyuan Gu, Ye Zhao, Anqi Wu
-- #link("https://arxiv.org/abs/2205.05800")[Stochastic first-order methods for average-reward Markov decision processes]. 2024. Mathematics of Operation Research.
-  Tianjiao Li, Feiyang Wu, Guanghui Lan
-- #link("https://arxiv.org/abs/2309.16074")[Infer and Adapt: Bipedal Locomotion Reward Learning from Demonstrations via Inverse Reinforcement Learning]. Sept 2023. ICRA 2024.
-  Feiyang Wu, Zhaoyuan Gu, Hanran Wu, Anqi Wu, Ye Zhao
-- #link("https://arxiv.org/abs/2305.14608")[Inverse Reinforcement Learning with the Average Reward Criterion]. NeurIPS 2023.
-  Feiyang Wu, Jingyang Ke, Anqi Wu
+#tufted.pub-entry(
+  title: [Distributional Inverse Reinforcement Learning],
+  url: "https://arxiv.org/pdf/2510.03013",
+  authors: [Feiyang Wu, Ye Zhao, Anqi Wu],
+  venue: [Preprint 2025],
+)
+
+#tufted.pub-entry(
+  title: [RL-augmented Adaptive Model Predictive Control for Bipedal Locomotion over Challenging Terrain],
+  url: "https://arxiv.org/pdf/2509.18466",
+  authors: [Junnosuke Kamohara, Feiyang Wu, Chinmayee Wamorkar, Seth Hutchinson, Ye Zhao],
+  venue: [ICRA 2026],
+)
+
+#tufted.pub-entry(
+  title: [SEEC: Stable End-Effector Control with Model-Enhanced Residual Learning for Humanoid Loco-Manipulation],
+  url: "https://arxiv.org/pdf/2509.21231",
+  authors: [Jaehwi Jang, Zhuoheng Wang, Ziyi Zhou, Feiyang Wu, Ye Zhao],
+  venue: [ICRA 2026],
+)
+
+#tufted.pub-entry(
+  title: [Inverse Reinforcement Learning with Switching Rewards and History Dependency for Characterizing Animal Behaviors],
+  url: "https://arxiv.org/pdf/2501.12633",
+  authors: [Jingyang Ke, Feiyang Wu, Jiyi Wang, Zhaoyuan Gu, Jeffrey Markowitz, Anqi Wu],
+  venue: [ICML 2025],
+)
+
+#tufted.pub-entry(
+  title: [Learn to Teach: Improve Sample Efficiency in Teacher-student Learning for Sim-to-Real Transfer],
+  url: "https://arxiv.org/abs/2402.06783",
+  authors: [Feiyang Wu, Xavier Nal, Zhaoyuan Gu, Ye Zhao, Anqi Wu],
+  venue: [RA-L 2025],
+)
+
+#tufted.pub-entry(
+  title: [Stochastic First-Order Methods for Average-Reward Markov Decision Processes],
+  url: "https://arxiv.org/abs/2205.05800",
+  authors: [Tianjiao Li, Feiyang Wu, Guanghui Lan],
+  venue: [Mathematics of Operations Research 2024],
+)
+
+#tufted.pub-entry(
+  title: [Infer and Adapt: Bipedal Locomotion Reward Learning from Demonstrations via Inverse Reinforcement Learning],
+  url: "https://arxiv.org/abs/2309.16074",
+  authors: [Feiyang Wu, Zhaoyuan Gu, Hanran Wu, Anqi Wu, Ye Zhao],
+  venue: [ICRA 2024],
+)
+
+#tufted.pub-entry(
+  title: [Inverse Reinforcement Learning with the Average Reward Criterion],
+  url: "https://arxiv.org/abs/2305.14608",
+  authors: [Feiyang Wu, Jingyang Ke, Anqi Wu],
+  venue: [NeurIPS 2023],
+)
 
 === Computer Vision
 
-- #link("https://ieeexplore.ieee.org/abstract/document/9222121")[SAniHead: Sketching Animal-Like 3D Character Heads Using a View-Surface Collaborative Mesh Generative Network]. 2020. IEEE Transactions on Visualization and Computer Graphics (TVCG).
-  Dong Du, Xiaoguang Han, Hongbo Fu, Feiyang Wu, Yizhou Yu, Shuguang Cui, Ligang Liu
+#tufted.pub-entry(
+  title: [SAniHead: Sketching Animal-Like 3D Character Heads Using a View-Surface Collaborative Mesh Generative Network],
+  url: "https://ieeexplore.ieee.org/abstract/document/9222121",
+  authors: [Dong Du, Xiaoguang Han, Hongbo Fu, Feiyang Wu, Yizhou Yu, Shuguang Cui, Ligang Liu],
+  venue: [IEEE Transactions on Visualization and Computer Graphics (TVCG) 2020],
+)
 ]

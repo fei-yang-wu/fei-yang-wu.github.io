@@ -131,15 +131,15 @@ h2 {
     line-height: 1.2;
     margin-top: 2.5rem;
     margin-bottom: 1rem;
-    padding-top: 1.5rem;
-    border-top: 1px solid #ddd;
 }
 
 h3 {
     font-size: 2rem;
     line-height: 1.2;
-    margin-top: 1.5rem;
+    margin-top: 3rem;
     margin-bottom: 0.8rem;
+    padding-top: 0.8rem;
+    border-top: 1px solid rgba(128, 128, 128, 0.35);
 }
 
 h4 {
@@ -552,9 +552,9 @@ footer {
 header nav {
     display: flex;
     gap: 1em;
-    /* Compensate for the 0.4em left padding on nav links so nav text
-       aligns with the left edge of body paragraph text */
-    margin-left: -0.4em;
+    /* Compensate for the 0.4em left padding on nav links (at 1.5rem font-size = 0.6rem)
+       so nav text aligns with the left edge of body paragraph text */
+    margin-left: -0.6rem;
 }
 
 header nav a,

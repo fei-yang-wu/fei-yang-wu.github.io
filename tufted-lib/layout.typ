@@ -32,6 +32,29 @@
   )
 }
 
+/// Embed a local video file in a responsive 16:9 container.
+///
+/// - src:      path to the video file, e.g. "/assets/videos/demo.mp4"
+/// - autoplay: start playing automatically (requires muted: true in most browsers)
+/// - loop:     whether the video loops (default false)
+/// - muted:    whether the video starts muted (default false)
+/// - poster:   optional poster image shown before playback starts
+#let local-video(src, autoplay: false, loop: false, muted: false, poster: none) = {
+  html.div(
+    class: "video-embed",
+    html.video(
+      src: src,
+      controls: true,
+      autoplay: autoplay,
+      loop: loop,
+      muted: muted,
+      playsinline: true,
+      poster: poster,
+      preload: "metadata",
+    ),
+  )
+}
+
 /// Back-navigation breadcrumb for detail pages (projects, blog posts, etc.).
 ///
 /// Renders a dimmed "← Label" line above the page title.
@@ -43,6 +66,17 @@
   // mis-classify "../" as a resource (because ".." contains a dot) and
   // open the link in a new tab.
   html.div(class: "back-link")[← #html.a(href: path)[#label]]
+}
+
+/// News entry with date on the left and content on the right.
+///
+/// - date:    date string, e.g. "Jan 2026"
+/// - content: news text (content)
+#let news-entry(date, content) = {
+  html.div(class: "news-entry")[
+    #html.span(class: "news-date")[#date]
+    #html.span(class: "news-text")[#content]
+  ]
 }
 
 /// Publication entry with title, authors, and venue on separate lines.
