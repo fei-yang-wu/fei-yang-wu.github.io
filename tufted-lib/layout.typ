@@ -81,14 +81,22 @@
 
 /// Publication entry with title, authors, and venue on separate lines.
 ///
-/// - title:   paper title (content)
-/// - url:     optional URL for the title link (string or none)
-/// - authors: author list (content)
-/// - venue:   venue / year (content or none to omit)
-#let pub-entry(title: [], url: none, authors: [], venue: none) = {
+/// - title:    paper title (content)
+/// - url:      optional URL for the title link (string or none)
+/// - authors:  author list (content)
+/// - venue:    venue / year (content or none to omit)
+/// - featured: if true, show accent bar beside the entry (default: false)
+/// - project:  optional URL to an internal project page (string or none)
+#let pub-entry(title: [], url: none, authors: [], venue: none, featured: false, project: none) = {
   html.div(class: "pub-entry")[
     #html.div(class: "pub-title")[
+      #if featured { html.span(class: "pub-star")[★] }
       #if url != none { link(url)[#title] } else { title }
+      #if project != none {
+        html.a(href: project, class: "pub-project-link", title: "Project page")[
+          #html.span(class: "proj-icon icon-arrow-up-right")[]
+        ]
+      }
     ]
     #html.div(class: "pub-authors")[#authors]
     #if venue != none {

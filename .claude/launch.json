@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "preview",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["build.py", "preview"],
+      "port": 8000
+    }
+  ]
+}

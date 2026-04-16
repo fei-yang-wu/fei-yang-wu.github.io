@@ -17,6 +17,25 @@ FULL-WIDTH OVERRIDES
     width: 100%;
 }
 
+/* h1 breathing room on intro pages */
+h1 {
+    margin-bottom: 2rem;
+}
+
+/* h4 as editorial category label (Reinforcement Learning, Computer Vision, etc.)
+   Project card h4s are reset below via .project-entry h4 */
+.fullwidth h4 {
+    font-size: 1.1rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: rgba(0, 0, 0, 0.45);
+    border-top: 1px solid rgba(128, 128, 128, 0.15);
+    margin-top: 2.5rem;
+    margin-bottom: 1.4rem;
+    padding-top: 1rem;
+}
+
 
 /*******************************************************************************
 PROJECT PAGES
@@ -109,10 +128,17 @@ PROJECT PAGES
     }
 }
 
-.project-entry h3 {
+.project-entry h4 {
     margin-top: 0;
     margin-bottom: 0.5rem;
+    padding-top: 0;
     font-size: 1.8rem;
+    font-weight: bold;
+    text-transform: none;
+    letter-spacing: normal;
+    color: #111;
+    opacity: 1;
+    border-top: none;
 }
 
 /* Venue / year badge row */
@@ -195,6 +221,11 @@ PROJECT PAGES
     mask-image: url('/assets/icons/video.svg');
 }
 
+.icon-arrow-up-right {
+    -webkit-mask-image: url('/assets/icons/arrow-up-right.svg');
+    mask-image: url('/assets/icons/arrow-up-right.svg');
+}
+
 /* Back navigation for project detail pages */
 .back-link {
     display: block;
@@ -222,13 +253,13 @@ NEWS ENTRIES
     grid-template-columns: 6rem 1fr;
     gap: 1rem;
     align-items: baseline;
-    margin-bottom: 0.7rem;
+    margin-bottom: 1.2rem;
     line-height: 1.8;
 }
 
 .news-date {
     font-size: 1.1rem;
-    font-family: monospace;
+    font-family: ui-monospace, 'SF Mono', 'Cascadia Code', 'Fira Mono', monospace;
     opacity: 0.5;
     white-space: nowrap;
 }
@@ -253,15 +284,70 @@ PUBLICATION ENTRIES
 .pub-entry {
     margin-bottom: 1.5rem;
     width: 100%;
+    position: relative;
 }
 
 .pub-entry > *:last-child {
     margin-bottom: 0;
 }
 
+.pub-entry:has(.pub-star)::before {
+    content: '';
+    position: absolute;
+    left: -1.4em;
+    top: 0.15em;
+    bottom: 0.15em;
+    width: 2px;
+    background: rgba(180, 130, 0, 0.35);
+    border-radius: 1px;
+}
+
 .pub-title {
     font-size: 1.4rem;
     line-height: 1.5;
+}
+
+.pub-title a,
+.pub-title a:link,
+.pub-title a:visited {
+    background-image: none !important;
+    text-shadow: none !important;
+    border-bottom: none;
+    text-decoration: none !important;
+}
+
+.pub-title a:hover {
+    text-decoration: underline !important;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+}
+
+.pub-star {
+    display: none;
+}
+
+.pub-project-link,
+.pub-project-link:link,
+.pub-project-link:visited {
+    display: inline-block;
+    margin-left: 0.05em;
+    vertical-align: 0.05em;
+    color: rgba(0, 0, 0, 0.28) !important;
+    background-image: none !important;
+    text-shadow: none !important;
+    text-decoration: none !important;
+    line-height: 1;
+    transition: color 0.15s ease;
+}
+
+.pub-project-link:hover {
+    color: rgba(0, 0, 0, 0.8) !important;
+}
+
+.pub-project-link .proj-icon {
+    width: 1.6em;
+    height: 1.6em;
+    vertical-align: -0.55em;
 }
 
 .pub-authors {
